@@ -5,6 +5,15 @@
 27th Aug
 Faqs and Services section added to portfolio where people can see q and a's and what services can use our website
 
+28th Aug
+1. Added all the links in navbar.
+2. Changed the whole styling of "who is it for" section.
+3. In "why axiro" section edited the content of cards.
+4. In "pricing" section changed terminologies.
+5. "Faq" content has been modified.
+6. In footer section added more content.
+7. In "get started" form, changed the styling of placeholders.
+
 
 
 
@@ -48,6 +57,11 @@ We will provide business with client website and admin dashboard
                           Logout in bottom left.
 
 
+        Limitations:
+            1.
+            2.
+            3.
+            4.
         
 
         Table structure
@@ -99,3 +113,10 @@ To do
 3. Content of FAQ and services needs to be changed.
 4. Styling change, title should be big and highlighted.
 5. Add AI image in "what is it for" section.
+
+
+
+To do 
+1. Add animation of scroll down instead of going straight to that section.
+2. Add more professionals in who is it for section.
+3. Change content of pricing.
