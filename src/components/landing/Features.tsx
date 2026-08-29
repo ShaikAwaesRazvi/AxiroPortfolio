@@ -8,7 +8,7 @@ interface Feature {
 
 const FEATURES: Feature[] = [
   { icon: "📅", title: "Smart scheduling", desc: "Clients book by stylist and service. No double-bookings, automatic buffer time between appointments." },
-  { icon: "💳", title: "Deposits & payments", desc: "Collect a deposit at booking to cut no-shows, and take full payment right in the app." },
+  { icon: "🔁", title: "Easy cancellations & rescheduling", desc: "Every confirmation email includes a booking reference number and a link, clients cancel anytime without calling you." },
   { icon: "🔔", title: "Automatic reminders", desc: "SMS and email reminders sent automatically, so clients actually show up." },
   { icon: "👥", title: "Stylist profiles", desc: "Showcase each stylist's specialty, portfolio, and availability — clients choose who fits their style." },
   { icon: "📊", title: "Owner dashboard", desc: "Track revenue, bookings, and stylist performance in one clean view." },

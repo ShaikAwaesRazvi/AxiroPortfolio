@@ -1,18 +1,49 @@
 import { useState, useEffect, useRef } from "react";
 
 interface AudienceCard {
-  emoji: string;
+  tag: string;
   title: string;
   desc: string;
+  image: string;
 }
 
 const AUDIENCES: AudienceCard[] = [
-  { emoji: "💇", title: "Hair Salons", desc: "Let clients pick their stylist and book cuts, color, and treatments online." },
-  { emoji: "💅", title: "Nail Salons", desc: "Manage nail techs, services, and appointment slots without the phone tag." },
-  { emoji: "💈", title: "Barbershops", desc: "Give regulars a fast way to rebook with their preferred barber." },
-  { emoji: "🧖", title: "Spas & Massage", desc: "Showcase treatments and therapists, with deposits to cut no-shows." },
-  { emoji: "🎨", title: "Tattoo Studios", desc: "Let clients browse artist portfolios and book consultations or sessions." },
-  { emoji: "💆", title: "Med Spas", desc: "Handle higher-ticket bookings like Botox and facials with a polished page." },
+  {
+    tag: "HAIR",
+    title: "Hair Salons",
+    desc: "Let clients pick their stylist and book cuts, color, and treatments online.",
+    image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    tag: "NAILS",
+    title: "Nail Salons",
+    desc: "Manage nail techs, services, and appointment slots without the phone tag.",
+    image: "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    tag: "BARBER",
+    title: "Barbershops",
+    desc: "Give regulars a fast way to rebook with their preferred barber.",
+    image: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    tag: "SPA",
+    title: "Spas & Massage",
+    desc: "Showcase treatments and therapists, and let clients book in seconds.",
+    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    tag: "TATTOO",
+    title: "Tattoo Studios",
+    desc: "Let clients browse artist portfolios and book consultations or sessions.",
+    image: "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    tag: "MED SPA",
+    title: "Med Spas",
+    desc: "Handle higher-ticket bookings like Botox and facials with a polished page.",
+    image: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=900&q=80",
+  },
 ];
 
 export default function WhoItsFor() {
@@ -49,34 +80,28 @@ export default function WhoItsFor() {
         <p>If your business runs on appointments and stylists, Axiro fits right in.</p>
       </div>
 
-      <div
-        className="who-carousel"
-        onMouseEnter={stopAutoplay}
-        onMouseLeave={startAutoplay}
-      >
-        <div
-          className="who-track"
-          style={{ transform: `translateX(-${activeIndex * 100}%)` }}
-        >
-          {AUDIENCES.map((item) => (
-            <div className="who-card" key={item.title}>
-              <div className="who-emoji">{item.emoji}</div>
-              <h3>{item.title}</h3>
-              <p>{item.desc}</p>
+      <div className="who-carousel" onMouseEnter={stopAutoplay} onMouseLeave={startAutoplay}>
+        {AUDIENCES.map((item, index) => {
+          const isActive = index === activeIndex;
+          return (
+            <div
+              key={item.title}
+              className={`who-card${isActive ? " who-card-active" : ""}`}
+              style={{ backgroundImage: `url(${item.image})` }}
+              onClick={() => goTo(index)}
+            >
+              {isActive && (
+                <>
+                  <span className="who-card-tag">{item.tag}</span>
+                  <div className="who-card-content">
+                    <h3>{item.title}</h3>
+                    <p>{item.desc}</p>
+                  </div>
+                </>
+              )}
             </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="who-dots">
-        {AUDIENCES.map((item, index) => (
-          <button
-            key={item.title}
-            className={`who-dot${index === activeIndex ? " who-dot-active" : ""}`}
-            onClick={() => goTo(index)}
-            aria-label={`Show ${item.title}`}
-          />
-        ))}
+          );
+        })}
       </div>
     </section>
   );

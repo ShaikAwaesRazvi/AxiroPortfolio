@@ -13,7 +13,7 @@ interface Tier {
 
 const MONTHLY_TIERS: Tier[] = [
   {
-    name: "Starter",
+    name: "Standard",
     price: "$29",
     period: "/month",
     desc: "For a single stylist or small salon just getting started.",
@@ -26,7 +26,7 @@ const MONTHLY_TIERS: Tier[] = [
     cta: "GET STARTED",
   },
   {
-    name: "Professional",
+    name: "Premium",
     price: "$59",
     period: "/month",
     desc: "For salons with a full team and steady bookings.",
@@ -34,7 +34,6 @@ const MONTHLY_TIERS: Tier[] = [
       "Up to 8 stylist profiles",
       "Unlimited bookings",
       "SMS + email reminders",
-      "Deposits & online payments",
       "Owner dashboard & reports",
     ],
     cta: "GET STARTED",
@@ -47,7 +46,7 @@ const MONTHLY_TIERS: Tier[] = [
     desc: "For salon groups with multiple locations or franchises.",
     features: [
       "Unlimited stylists & locations",
-      "Everything in Professional",
+      "Everything in Premium",
       "Dedicated onboarding support",
       "Custom integrations",
     ],
@@ -57,7 +56,7 @@ const MONTHLY_TIERS: Tier[] = [
 
 const ONE_TIME_TIERS: Tier[] = [
   {
-    name: "Starter",
+    name: "Standard",
     price: "$499",
     period: "one-time",
     desc: "Own your booking page outright. No recurring fees.",
@@ -71,7 +70,7 @@ const ONE_TIME_TIERS: Tier[] = [
     cta: "BUY NOW",
   },
   {
-    name: "Professional",
+    name: "Premium",
     price: "$999",
     period: "one-time",
     desc: "Full feature set, purchased once, yours for good.",
@@ -79,7 +78,6 @@ const ONE_TIME_TIERS: Tier[] = [
       "Up to 8 stylist profiles",
       "Unlimited bookings",
       "SMS + email reminders",
-      "Deposits & online payments",
       "Owner dashboard & reports",
       "Lifetime updates for this tier",
     ],
@@ -93,7 +91,7 @@ const ONE_TIME_TIERS: Tier[] = [
     desc: "One-time build-out for salon groups or franchises.",
     features: [
       "Unlimited stylists & locations",
-      "Everything in Professional",
+      "Everything in Premium",
       "Dedicated onboarding support",
       "Custom integrations",
     ],

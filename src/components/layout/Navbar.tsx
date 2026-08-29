@@ -13,9 +13,11 @@ export default function Navbar({ onGetStarted }: NavbarProps) {
         </div>
       </div>
       <div className="nav-links">
+        <a href="#who-its-for">Who It's For</a>
         <a href="#features">Features</a>
-        <a href="#how-it-works">How it works</a>
         <a href="#pricing">Pricing</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#faq">FAQ</a>
         <button className="btn-pill" onClick={onGetStarted}>GET STARTED</button>
       </div>
     </nav>

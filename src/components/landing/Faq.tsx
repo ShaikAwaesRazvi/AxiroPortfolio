@@ -22,9 +22,9 @@ const FAQS: FaqItem[] = [
       "Yes, you can upgrade, downgrade, or switch from monthly to a one-time purchase at any point. There's no lock-in contract.",
   },
   {
-    question: "What happens if a client no-shows?",
+    question: "How do clients cancel or reschedule an appointment?",
     answer:
-      "If you've enabled deposits, the deposit is collected automatically at booking, which covers you if the client doesn't show up.",
+      "Every booking confirmation email includes a unique booking reference number and a secure link. Clients can use it anytime to reschedule or cancel their appointment — no need to call you directly.",
   },
   {
     question: "Can I manage multiple stylists or locations?",
@@ -35,6 +35,16 @@ const FAQS: FaqItem[] = [
     question: "Is there a contract or cancellation fee?",
     answer:
       "No. Monthly plans can be cancelled anytime with no fee. One-time purchases are yours to keep with no recurring obligation at all.",
+  },
+  {
+    question: "Do I need any technical skills to set this up?",
+    answer:
+      "None at all. You tell us about your salon — services, stylists, hours — and we handle the setup and get your page live for you.",
+  },
+  {
+    question: "Can I use my own domain name?",
+    answer:
+      "Yes, you can connect your own domain, or use the free Axiro subdomain we give you when you sign up.",
   },
 ];
 
