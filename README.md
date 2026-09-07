@@ -120,3 +120,8 @@ To do
 1. Add animation of scroll down instead of going straight to that section.
 2. Add more professionals in who is it for section.
 3. Change content of pricing.
+
+
+
+7 sept:
+Owner has to pay on time in order to keep the site live
