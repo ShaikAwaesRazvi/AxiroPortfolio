@@ -44,6 +44,12 @@ const AUDIENCES: AudienceCard[] = [
     desc: "Handle higher-ticket bookings like Botox and facials with a polished page.",
     image: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=900&q=80",
   },
+  {
+    tag: "NO LIMITS",
+    title: "And Anyone Else Who Takes Bookings",
+    desc: "Any business that runs on appointments like photographers, trainers, tutors, consultants can get set up on Axiro.",
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80",
+  },
 ];
 
 export default function WhoItsFor() {
@@ -76,17 +82,18 @@ export default function WhoItsFor() {
     <section id="who-its-for" className="who-section">
       <div className="section-head">
         <div className="eyebrow">WHO IT'S FOR</div>
-        <h2>Built for beauty & wellness businesses</h2>
-        <p>If your business runs on appointments and stylists, Axiro fits right in.</p>
+        <h2>Built for any business that runs on appointments</h2>
+        <p>From salons to studios to solo practitioners, if clients book time with you, Axiro fits right in.</p>
       </div>
 
       <div className="who-carousel" onMouseEnter={stopAutoplay} onMouseLeave={startAutoplay}>
         {AUDIENCES.map((item, index) => {
           const isActive = index === activeIndex;
+          const isLast = index === AUDIENCES.length - 1;
           return (
             <div
               key={item.title}
-              className={`who-card${isActive ? " who-card-active" : ""}`}
+              className={`who-card${isActive ? " who-card-active" : ""}${isLast ? " who-card-final" : ""}`}
               style={{ backgroundImage: `url(${item.image})` }}
               onClick={() => goTo(index)}
             >

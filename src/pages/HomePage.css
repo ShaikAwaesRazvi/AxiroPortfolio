@@ -678,6 +678,25 @@ section { padding: 90px 56px; font-family: 'Inter', sans-serif; color: var(--cha
   opacity: 0.9;
 }
 
+/* Final "No Limits" slide gets a distinct darker overlay so it reads
+   as a closing statement rather than another category in the list */
+.who-card-final::after {
+  background: linear-gradient(to top, rgba(34,32,29,0.88), rgba(34,32,29,0.35) 55%, rgba(34,32,29,0.1)) !important;
+}
+.who-card-final.who-card-active::after {
+  opacity: 1;
+}
+.who-card-final .who-card-tag {
+  background: var(--sage) !important;
+  color: var(--charcoal) !important;
+  border-color: var(--sage) !important;
+  font-weight: 800;
+}
+.who-card-final .who-card-content h3 {
+  font-size: 30px;
+}
+
+
 @media (max-width: 900px) {
   .who-carousel { flex-direction: column; height: auto; }
   .who-card { flex: none; height: 64px; }
