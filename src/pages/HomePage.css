@@ -100,14 +100,29 @@ section { padding: 90px 56px; font-family: 'Inter', sans-serif; color: var(--cha
 .feature-card h3 { font-family: 'Playfair Display', serif; font-weight: 500; font-size: 19px; margin-bottom: 10px; }
 .feature-card p { font-size: 14px; color: #666; line-height: 1.6; }
 
-.feature-premium {
+.premium-badge {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--blush-dark);
-  letter-spacing: 0.5px;
+
+  top: 20px;
+  right: 20px;
+
+  width: 28px;
+  height: 28px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgb(139, 92, 246);
+  color: #ffffff;
+
+  font-size: 15px;
+  line-height: 1;
+
+  box-shadow: 0 4px 10px rgba(227, 169, 138, 0.25);
+  font-family: Arial, sans-serif;
 }
 
 /* ===== How It Works ===== */
