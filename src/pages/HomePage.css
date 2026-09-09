@@ -15,7 +15,6 @@ html, body, #root {
   padding: 0;
   background-color: var(--cream);
   color: var(--charcoal);
-  overflow-x: hidden;
 }
 #root {
   max-width: none !important;
