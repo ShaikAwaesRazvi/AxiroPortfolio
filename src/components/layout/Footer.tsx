@@ -10,10 +10,10 @@ export default function Footer() {
               <div className="logo-sub">BOOKING PLATFORM</div>
             </div>
           </div>
-          <p className="footer-tagline">
-            Booking software built for hair and nail salons  so you spend less
-            time on the phone and more time behind the chair.
-          </p>
+            <p className="footer-tagline">
+              Booking software for any business that runs on appointments.
+              Less time on the phone, more time doing what you do best.
+            </p>
         </div>
 
         <div className="footer-col">
