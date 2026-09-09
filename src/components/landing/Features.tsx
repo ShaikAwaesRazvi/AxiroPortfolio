@@ -71,19 +71,19 @@ export default function Features() {
       </div>
 
       <div className="features-grid" ref={gridRef}>
-        {FEATURES.map((f) => (
-          <div className="feature-card reveal reveal-stagger" key={f.title}>
-            {f.premium && (
-              <div className="feature-premium">⭐ Premium</div>
-            )}
+          {FEATURES.map((f) => (
+              <div className="feature-card reveal reveal-stagger" key={f.title}>
+                  {f.premium && (
+                      <div className="premium-badge">★</div>
+                  )}
 
-            <div className="feature-icon">{f.icon}</div>
+                  <div className="feature-icon">{f.icon}</div>
 
-            <h3>{f.title}</h3>
+                  <h3>{f.title}</h3>
 
-            <p>{f.desc}</p>
-          </div>
-        ))}
+                  <p>{f.desc}</p>
+              </div>
+          ))}
       </div>
     </section>
   );
