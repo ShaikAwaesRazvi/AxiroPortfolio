@@ -1,3 +1,4 @@
+import { useState } from "react";
 import axiroLogo from "../../assets/axiroLogo.png"
 
 interface NavbarProps {
@@ -5,6 +6,14 @@ interface NavbarProps {
 }
 
 export default function Navbar({ onGetStarted }: NavbarProps) {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => setMenuOpen(false);
+
+  const handleGetStarted = () => {
+    closeMenu();
+    onGetStarted();
+  };
   return (
       <nav className="navbar">
           <div className="logo">
@@ -22,17 +31,25 @@ export default function Navbar({ onGetStarted }: NavbarProps) {
               </div>
           </div>
 
-          <div className="nav-links">
-              <a href="#who-its-for">Who It's For</a>
-              <a href="#features">Features</a>
-              <a href="#pricing">Pricing</a>
-              <a href="#how-it-works">How it works</a>
-              <a href="#faq">FAQ</a>
+<div className={`nav-links${menuOpen ? " nav-links-open" : ""}`}>
+        <a href="#who-its-for" onClick={closeMenu}>Who It's For</a>
+        <a href="#features" onClick={closeMenu}>Features</a>
+        <a href="#pricing" onClick={closeMenu}>Pricing</a>
+        <a href="#how-it-works" onClick={closeMenu}>How it works</a>
+        <a href="#faq" onClick={closeMenu}>FAQ</a>
+        <button className="btn-pill" onClick={handleGetStarted}>GET STARTED</button>
+      </div>
 
-              <button className="btn-pill" onClick={onGetStarted}>
-                  GET STARTED
-              </button>
-          </div>
+      <button
+        className={`nav-toggle${menuOpen ? " nav-toggle-open" : ""}`}
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle menu"
+        aria-expanded={menuOpen}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       </nav>
   );
 }

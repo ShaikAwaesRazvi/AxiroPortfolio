@@ -7,9 +7,9 @@ interface Step {
 }
 
 const STEPS: Step[] = [
-  { num: 1, title: "Tell us about your salon", desc: "Services, stylists, hours — takes about ten minutes to set up." },
+  { num: 1, title: "Tell us about your business", desc: "Services, staff, hours. It takes about 1-2 days to set up." },
   { num: 2, title: "We build your page", desc: "A branded booking site goes live, ready to share with clients." },
-  { num: 3, title: "Clients book themselves", desc: "They pick a stylist, pick a time, and you get notified instantly." },
+  { num: 3, title: "Clients book in seconds", desc: "No calls, no back and forth. Just a few taps and it's on the calendar." },
 ];
 
 export default function HowItWorks() {

@@ -9,12 +9,12 @@ const FAQS: FaqItem[] = [
   {
     question: "How long does it take to get my booking page live?",
     answer:
-      "Most salons are up and running within a day of signing up. Once you tell us your services, stylists, and hours, we handle the setup and send you the link.",
+      "Most salons are up and running within 2 days of signing up. Once you tell us your services, stylists, and hours, we handle the setup and send you the link.",
   },
   {
     question: "Do my clients need to download an app?",
     answer:
-      "No. Your booking page works right in any browser, on desktop or mobile. Clients just tap your link and book — no app, no account creation required.",
+      "No. Your booking page works right in any browser, on desktop or mobile. Clients just tap your link and book. No app, no account creation required.",
   },
   {
     question: "Can I switch between plans later?",
@@ -24,28 +24,44 @@ const FAQS: FaqItem[] = [
   {
     question: "How do clients cancel or reschedule an appointment?",
     answer:
-      "Every booking confirmation email includes a unique booking reference number and a secure link. Clients can use it anytime to reschedule or cancel their appointment — no need to call you directly.",
+      "Every booking confirmation email includes a unique booking reference number and a secure link. Clients can use it anytime to reschedule or cancel their appointment, no need to call you directly.",
+  },
+  // {
+  //   question: "Can I manage multiple stylists or locations?",
+  //   answer:
+  //     "Yes. Each stylist gets their own profile and availability, and salon groups with multiple locations can use our Multi-Location plan to manage everything from one dashboard.",
+  // },
+  {
+  question: "Can I try it out before committing to a plan?",
+  answer:
+    "Yes. Reach out and we can walk you through a demo of your booking page before you decide on a plan.",
+  },
+  // {
+  // question: "What if I need help after my page is live?",
+  // answer:
+  //   "We're just an email or call away. If you need to add a new service, update your hours, or run into any issues, reach out and we'll sort it out for you.",
+  // },
+  {
+    question: "What happens to my bookings if I switch plans?",
+    answer:
+      "Nothing gets lost. All your existing bookings, clients, and settings carry over automatically, whether you're upgrading, downgrading, or switching from monthly to one-time.",
   },
   {
-    question: "Can I manage multiple stylists or locations?",
-    answer:
-      "Yes. Each stylist gets their own profile and availability, and salon groups with multiple locations can use our Multi-Location plan to manage everything from one dashboard.",
+  question: "Is there a contract or cancellation fee?",
+  answer:
+    "No contracts. If you're on a monthly plan, you can cancel anytime with no fee. If you buy the one-time plan, it's yours to keep for good.",
   },
   {
-    question: "Is there a contract or cancellation fee?",
-    answer:
-      "No. Monthly plans can be cancelled anytime with no fee. One-time purchases are yours to keep with no recurring obligation at all.",
+  question: "Do I need any technical skills to set this up?",
+  answer:
+    "None at all. Just tell us about your business, things like your services, staff, and hours, and we'll handle the setup and get your page live for you.",
   },
   {
-    question: "Do I need any technical skills to set this up?",
-    answer:
-      "None at all. You tell us about your salon — services, stylists, hours — and we handle the setup and get your page live for you.",
+  question: "Can I use my own domain name?",
+  answer:
+    "Yes, you can use your own domain, or if you don't have one yet, we can help you get set up with one.",
   },
-  {
-    question: "Can I use my own domain name?",
-    answer:
-      "Yes, you can connect your own domain, or use the free Axiro subdomain we give you when you sign up.",
-  },
+
 ];
 
 export default function Faq() {
