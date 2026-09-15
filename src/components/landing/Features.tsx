@@ -14,12 +14,12 @@ const FEATURES: Feature[] = [
     desc: "Clients book by service and employee. No double-bookings, with automatic buffer time between appointments.",
   },
   {
-    icon: "✕",
+    icon: "❌",
     title: "Easy cancellations",
     desc: "Clients can cancel their appointments easily without calling or messaging your business.",
   },
   {
-    icon: "↻",
+    icon: "🔁",
     title: "Easy rescheduling",
     premium: true,
     desc: "Premium members can let clients reschedule appointments themselves based on real-time availability.",
