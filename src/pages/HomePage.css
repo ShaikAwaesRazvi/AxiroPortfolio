@@ -83,7 +83,7 @@ section { padding: 90px 56px; font-family: 'Inter', sans-serif; color: var(--cha
   margin: 0 auto;
 }
 
-.feature-card { background: #fff; border: 1px solid #eee; border-radius: 16px; padding: 36px 30px; position: relative; }
+.feature-card { background: #fbfaf7; border: 1px solid #eee; border-radius: 16px; padding: 36px 30px; position: relative; }
 
 @media (min-width: 901px) {
   .features-grid .feature-card { grid-column: span 3; }
