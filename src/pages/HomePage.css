@@ -211,13 +211,6 @@ section { padding: 90px 56px; font-family: 'Inter', sans-serif; color: var(--cha
   align-items: center;
   justify-content: center;
 }
-/* .footer-social-icon:hover {
-  background: var(--sage);
-  color: var(--charcoal);
-  border-color: var(--sage);
-} */
-
-/* .footer-socials { display: flex; flex-direction: column; } */
 
 .footer-bottom {
   border-top: 1px solid #eee;
@@ -300,7 +293,6 @@ section { padding: 90px 56px; font-family: 'Inter', sans-serif; color: var(--cha
 .steps.in-view .reveal-stagger:nth-child(3) { animation-delay: 0.24s; }
 .pricing-grid.in-view .reveal-stagger:nth-child(1) { animation-delay: 0s; }
 .pricing-grid.in-view .reveal-stagger:nth-child(2) { animation-delay: 0.15s; }
-.pricing-grid.in-view .reveal-stagger:nth-child(3) { animation-delay: 0.3s; }
 
 .cta-band.reveal.in-view { animation: scaleIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
 
@@ -537,10 +529,11 @@ section { padding: 90px 56px; font-family: 'Inter', sans-serif; color: var(--cha
 }
 
 .pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 28px;
-  max-width: 1100px;
+  max-width: 900px;
   margin: 0 auto;
   align-items: stretch;
 }
@@ -553,6 +546,9 @@ section { padding: 90px 56px; font-family: 'Inter', sans-serif; color: var(--cha
   display: flex;
   flex-direction: column;
   position: relative;
+  flex: 0 1 400px;
+  width: 400px;
+  max-width: 180%;
   transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
 }
 .pricing-card:hover {
@@ -641,7 +637,8 @@ section { padding: 90px 56px; font-family: 'Inter', sans-serif; color: var(--cha
 }
 
 @media (max-width: 900px) {
-  .pricing-grid { grid-template-columns: 1fr; max-width: 460px; }
+  .pricing-grid { max-width: 460px; }
+  .pricing-card { flex: 1 1 100%; width: 100%; }
 }
 
 /* ===== Who It's For (main + strip carousel) ===== */

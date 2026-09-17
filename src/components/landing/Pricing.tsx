@@ -16,12 +16,12 @@ const MONTHLY_TIERS: Tier[] = [
     name: "Standard",
     price: "$29",
     period: "/month",
-    desc: "For a single stylist or small salon just getting started.",
+    desc: "Core booking tools for a single admin managing one business.",
     features: [
-      "1 stylist profile",
+      "Book by service & stylist",
+      "Email confirmation & cancellation",
       "Unlimited bookings",
-      "Email reminders",
-      "Branded booking page",
+      "Employee, service & gallery management",
     ],
     cta: "GET STARTED",
   },
@@ -29,28 +29,16 @@ const MONTHLY_TIERS: Tier[] = [
     name: "Premium",
     price: "$59",
     period: "/month",
-    desc: "For salons with a full team and steady bookings.",
+    desc: "Automated scheduling with staff logins & SMS reminders.",
     features: [
-      "Up to 8 stylist profiles",
-      "Unlimited bookings",
+      "Everything in Standard",
+      "Client self-reschedule via email",
+      "Automated email notification if a stylist is unavailable",
       "SMS + email reminders",
-      "Owner dashboard & reports",
+      "Individual employee logins",
     ],
     cta: "GET STARTED",
     highlighted: true,
-  },
-  {
-    name: "Multi-Location",
-    price: "Custom",
-    period: "",
-    desc: "For salon groups with multiple locations or franchises.",
-    features: [
-      "Unlimited stylists & locations",
-      "Everything in Premium",
-      "Dedicated onboarding support",
-      "Custom integrations",
-    ],
-    cta: "CONTACT US",
   },
 ];
 
@@ -61,10 +49,10 @@ const ONE_TIME_TIERS: Tier[] = [
     period: "one-time",
     desc: "Own your booking page outright. No recurring fees.",
     features: [
-      "1 stylist profile",
+      "Book by service & stylist",
+      "Email confirmation & cancellation",
+      "Employee, service & gallery management",
       "Unlimited bookings",
-      "Email reminders",
-      "Branded booking page",
       "Lifetime updates for this tier",
     ],
     cta: "BUY NOW",
@@ -75,27 +63,15 @@ const ONE_TIME_TIERS: Tier[] = [
     period: "one-time",
     desc: "Full feature set, purchased once, yours for good.",
     features: [
-      "Up to 8 stylist profiles",
-      "Unlimited bookings",
+      "Everything in Standard",
+      "Client self-reschedule via email",
+      "Automated email notification if a stylist is unavailable",
       "SMS + email reminders",
-      "Owner dashboard & reports",
+      "Individual employee logins",
       "Lifetime updates for this tier",
     ],
     cta: "BUY NOW",
     highlighted: true,
-  },
-  {
-    name: "Multi-Location",
-    price: "Custom",
-    period: "",
-    desc: "One-time build-out for salon groups or franchises.",
-    features: [
-      "Unlimited stylists & locations",
-      "Everything in Premium",
-      "Dedicated onboarding support",
-      "Custom integrations",
-    ],
-    cta: "CONTACT US",
   },
 ];
 
@@ -114,7 +90,7 @@ export default function Pricing({ onGetStarted }: PricingProps) {
       <div className="section-head">
         <div className="eyebrow">PRICING</div>
         <h2>Simple pricing, no surprises</h2>
-        <p>Pay monthly, or buy your booking system outright — whichever fits your salon.</p>
+        <p>Pay monthly, or buy your booking system outright - whichever fits your business.</p>
 
         <div className="billing-toggle">
           <button
