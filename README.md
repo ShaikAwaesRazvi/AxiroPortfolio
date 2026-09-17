@@ -21,47 +21,85 @@ Faqs and Services section added to portfolio where people can see q and a's and 
 
 
 
-Versions of our application
-Basic:
-We will provide business with client website and admin dashboard
-    In client website:
-        Features:
-            1. Client can book an appointment based on service and styist and choose their date and time accordingly.
-            2. Client will get an confirmation email with date, stylist name and time.
-            3. In the same confirmation email, they will recieve cancel link where they can cancel appointment within 12 hours.
-        Limitations:
-            1. If their selected stylist calls in sick, They wont get an email for rescheduling or cancelling(store has to handle this manually as this feature requires seperate profile for employee).
+# Axiro Systems — Application Versions
 
-    In admin side:
-        Features:
-            1. Admin can Add employee, delete employee, update employee.
-            2. Delete employee: Admin can see all the employees in one page woth their profile picture and name and update and delete options on right side.
-            3. When employee clicks on update employee, he will be able to update the fields of employee.
-            4. Nav Bar => Dashboard (welcome text)
-                          Employee => Employee Table > Edit & Delete
-                                   => Add Employee button > Form > Table#1
-                          Services => Services Table > Edit & Delete
-                                   => Add Services button > Form > Table#1  
-                          Gallery  => 1. Hair
-                                      [] [] [] [] ... [+]
+Two tiers of the platform: **Basic** (manual-first, core booking) and **Premium** (automated, staff-aware, reporting-enabled). Premium is designed to directly resolve every limitation listed under Basic.
 
-                                      2. Nails
-                                      [] [] [] [] ... [+]
+---
 
-                                      Generate these based on added services even when pics are not uploaded.
-                     *   Scheduling => Calender
-                                     Mon   Tues   Wedn       
-                                E    10-8  
-                                J    4- 8
-                                D    -
-                          Logout in bottom left.
+## BASIC
+
+### Client Website
+
+**Features**
+1. Client can book an appointment by selecting a service and stylist, then choosing their preferred date and time.
+2. Client receives a confirmation email containing the date, stylist name, and time.
+3. The same confirmation email includes a cancellation link, allowing the client to cancel without contacting the store.
+
+**Limitations**
+1. If the assigned stylist is unavailable (e.g. calls in sick), the client does not receive an automatic email to reschedule or cancel. This must be handled manually by the store, since automated handling requires individual employee profiles with linked availability.
+2. Clients cannot reschedule their own appointment. They can only cancel and would need to book a new appointment separately.
+3. There is no SMS reminder. Clients rely solely on the confirmation email, with no follow-up reminder closer to the appointment date.
+
+### Admin Dashboard
+
+**Features**
+1. Admin can add, update, and delete employees.
+2. Employee list view: all employees displayed on one page with profile picture, name, and Edit/Delete actions on the right.
+3. Clicking "Update Employee" opens a form pre-filled with that employee's fields for editing.
+4. Navigation structure:
+   - **Dashboard** — welcome/landing view
+   - **Employees** — Employee Table (Edit & Delete) → "Add Employee" button opens a form → new entry appears in the table
+   - **Services** — Services Table (Edit & Delete) → "Add Service" button opens a form → new entry appears in the table
+   - **Gallery** — auto-generated sections per active service (e.g. "Hair", "Nails"), each showing an image grid with a "+" tile to upload. Sections generate automatically based on added services, even before any photos are uploaded.
+   - **Scheduling** — a simple read-only weekly calendar view showing which employee is booked at which times (manually referenced by Admin; not tied to automated notifications)
+   - **Logout** — bottom left
+
+**Limitations**
+1. There is no client management view. Admin can see individual appointments but has no consolidated client list, booking history, or repeat-client tracking.
+
+---
+
+## PREMIUM
+
+Premium includes everything in Basic, plus the following.
+
+### Client Website
+
+**Features**
+1. Everything in Basic, plus:
+2. Each stylist has an individual profile with linked availability. If a stylist is marked unavailable (sick day, time off), any client with an affected appointment is automatically emailed to reschedule or cancel, no manual admin intervention required.
+3. Clients can reschedule their own appointment directly from the confirmation email link, choosing a new available date, time, or stylist without needing to cancel and rebook from scratch.
+4. Clients receive both SMS and email reminders ahead of their appointment, reducing no-shows.
 
 
-        Limitations:
-            1.
-            2.
-            3.
-            4.
+
+### Admin Dashboard
+
+**Features**
+1. Everything in Basic, plus:
+2. Each employee gets their own login to view and manage their personal schedule, mark themselves unavailable, and trigger the automated client-rescheduling flow.
+3. Client management view: a searchable list of all clients, their booking history, total visits, and last appointment, so staff can spot repeat clients at a glance.email is unique identifier.
+4. Custom notification rules: Admin can configure how far in advance reminders are sent (e.g. 24 hours and 2 hours before) and choose SMS, email, or both per client preference.
+
+
+---
+
+## Summary Table
+
+| Capability | Basic | Premium |
+|---|---|---|
+| Book by service + stylist | ✅ | ✅ |
+| Email confirmation | ✅ | ✅ |
+| Cancel via email link | ✅ | ✅ |
+| Reschedule via email link | ❌ | ✅ |
+| Auto-reschedule on stylist unavailability | ❌ | ✅ |
+| SMS reminders | ❌ | ✅ |
+| Employee CRUD (add/edit/delete) | ✅ | ✅ |
+| Individual employee logins | ❌ | ✅ |
+| Client management / history view | ❌ | ✅ |
+| Auto-generated service gallery | ✅ | ✅ |
+| Custom notification timing/channel | ❌ | ✅ |
         
 
         Table structure
@@ -108,19 +146,8 @@ Ask gpt what to include in our versions (scheduling or not)
 
 
 To do 
-1. Need to decide the limitation for admin panel.
-2. Need to decide what to include in what plans both features & limitation.
-3. Content of FAQ and services needs to be changed.
-4. Styling change, title should be big and highlighted.
-5. Add AI image in "what is it for" section.
-
-
-
-To do 
-1. Add animation of scroll down instead of going straight to that section.
-2. Add more professionals in who is it for section.
-3. Change content of pricing.
-
+1. Change content of pricing.
+2. Feature Card color, LOGO in footer.
 
 
 7 sept:
