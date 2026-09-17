@@ -1,14 +1,23 @@
+import axiroLogo from "../../assets/axiroLogo.png"
+
 export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-top">
         <div className="footer-brand">
           <div className="logo">
-            <div className="logo-mark">AS</div>
-            <div>
-              <div className="logo-text">AXIRO SYSTEMS</div>
-              <div className="logo-sub">BOOKING PLATFORM</div>
-            </div>
+              <div className="logo-circle">
+                  <img
+                      src={axiroLogo as string}
+                      alt="Axiro Systems"
+                      className="logo-image"
+                  />
+              </div>
+
+              <div>
+                  <div className="logo-text">AXIRO SYSTEMS</div>
+                  <div className="logo-sub">BOOKING PLATFORM</div>
+              </div>
           </div>
             <p className="footer-tagline">
               Booking software for any business that runs on appointments.
